@@ -26,14 +26,31 @@ const layerConfigurations = [
   {
     growEditionSizeTo: 111,
     layersOrder: [
-      { name: "Backgrounds" },
-      { name: "Coats" },
-      { name: "Necks" },
-      { name: "NoseColors" },
-      { name: "EyeColors" },
-      { name: "Emotions" },
-      { name: "Tattoos" },
-      { name: "ForHeads" },
+      {
+        name: "Background"
+      },
+      { name: "Coat" },
+      { name: "Neck" },
+      {
+        name: "NoseColor",
+        options: {
+          displayName: "Nose Color"
+        }
+      },
+      {
+        name: "EyeColor", options: {
+          displayName: "Eye Color"
+        }
+      },
+      { name: "Emotion" },
+      {
+        name: "Tattoo",
+        options: {
+          blend: MODE.multiply,
+          opacity: 0.7
+        }
+      },
+      { name: "Forehead" },
       { name: "Manes" },
 
     ],
