@@ -5,13 +5,13 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
+const namePrefix = "Band horses";
+const description = "Musician horses of blockchain";
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
   symbol: "YC",
-  seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
+  seller_fee_basis_points: 200, // Define how much % you want from secondary market sales 1000 = 10%
   external_url: "https://www.youtube.com/c/hashlipsnft",
   creators: [
     {
@@ -24,15 +24,18 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 111,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Backgrounds" },
+      { name: "Coats" },
+      { name: "Necks" },
+      { name: "NoseColors" },
+      { name: "EyeColors" },
+      { name: "Emotions" },
+      { name: "Tattoos" },
+      { name: "ForHeads" },
+      { name: "Manes" },
+
     ],
   },
 ];
@@ -42,15 +45,15 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
-  smoothing: false,
+  width: 800,
+  height: 800,
+  smoothing: true,
 };
 
 const gif = {
   export: false,
-  repeat: 0,
-  quality: 100,
+  repeat: -1,
+  quality: 99,
   delay: 500,
 };
 
@@ -72,7 +75,7 @@ const pixelFormat = {
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
   static: false,
   default: "#000000",
