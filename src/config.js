@@ -10,12 +10,12 @@ const description = "Musician horses of blockchain";
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
-  symbol: "YC",
-  seller_fee_basis_points: 200, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.youtube.com/c/hashlipsnft",
+  symbol: "bnh",
+  seller_fee_basis_points: 200,
+  external_url: "https://bandhorses.com/",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "3ExDtohsVkLD5w2RcAhuWqkvMMSNcHesENNzhcZ7k3U2",
       share: 100,
     },
   ],
@@ -24,10 +24,16 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 111,
+    growEditionSizeTo: 2222,
     layersOrder: [
       {
         name: "Background"
+      },
+      {
+        name: "FavoriteDrummer",
+        options: {
+          displayName: "Favorite Drummer"
+        }
       },
       { name: "Coat" },
       { name: "Neck" },
@@ -38,7 +44,8 @@ const layerConfigurations = [
         }
       },
       {
-        name: "EyeColor", options: {
+        name: "EyeColor",
+        options: {
           displayName: "Eye Color"
         }
       },
@@ -51,7 +58,7 @@ const layerConfigurations = [
         }
       },
       { name: "Forehead" },
-      { name: "Manes" },
+      { name: "Mane" },
 
     ],
   },
@@ -107,17 +114,17 @@ const uniqueDnaTorrance = 10000;
 const preview = {
   thumbPerRow: 5,
   thumbWidth: 50,
-  imageRatio: format.height / format.width,
+  imageRatio: format.height * 1.33 / format.width * 1.33,
   imageName: "preview.png",
 };
 
 const preview_gif = {
   numberOfImages: 5,
-  order: "ASC", // ASC, DESC, MIXED
+  order: "MIXED", // ASC, DESC, MIXED
   repeat: 0,
-  quality: 100,
-  delay: 500,
-  imageName: "preview.gif",
+  quality: 99,
+  delay: 700,
+  imageName: "bhpreview.gif",
 };
 
 module.exports = {
